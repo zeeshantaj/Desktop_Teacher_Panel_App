@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1003.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_teacher_panel_app.MainHomeContentController">
+    <left>
+        <VBox prefHeight="601.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="uploadClass" mnemonicParsing="false" onAction="#uploadClass" prefHeight="30.0" prefWidth="173.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;" styleClass="bt" text="Class" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="uploadAnnouncement" mnemonicParsing="false" onAction="#uploadAnnouncement" prefHeight="30.0" prefWidth="172.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px;" styleClass="bt" text="Accouncement" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="classHistory" mnemonicParsing="false" onAction="#classHistory" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px;" styleClass="bt" text="Class History" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="announcementHistory" mnemonicParsing="false" onAction="#announcementHistory" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px; -fx-pref-height: 40px;" styleClass="bt" text="Accouncement History" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+
+            </children>
+        </VBox>
+    </left>
+    <top>
+        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="1016.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="logout" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="77.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #fc0b03;" styleClass="bt" text="Log Out" textAlignment="JUSTIFY" textFill="#eb401a">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets right="4.0" />
+                    </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets right="5.0" />
+            </BorderPane.margin></HBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+                <Pane fx:id="container" prefHeight="435.0" prefWidth="843.0" />
+            </children></VBox>
+    </center>
+</BorderPane>
