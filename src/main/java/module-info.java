@@ -9,8 +9,8 @@ module com.example.desktop_teacher_panel_app {
     //requires eu.hansolo.tilesfx;
 
     requires java.logging;
-    requires firebase.admin;
-    requires com.google.auth.oauth2;
+//    requires firebase.admin;
+//    requires com.google.auth.oauth2;
 
 
     opens com.example.desktop_teacher_panel_app to javafx.fxml;

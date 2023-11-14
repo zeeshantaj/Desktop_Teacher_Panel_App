@@ -38,7 +38,7 @@ javafx {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-admin:8.0.1' // Replace with the latest version
+   // implementation 'com.google.firebase:firebase-admin:9.2.0' // Replace with the latest version
     implementation('org.controlsfx:controlsfx:11.1.2')
     implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
         exclude(group: 'org.openjfx')

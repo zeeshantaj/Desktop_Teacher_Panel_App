@@ -7,15 +7,15 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_teacher_panel_app.AnnouncementUploadController">
     <children>
-        <TextField layoutX="49.0" layoutY="20.0" prefHeight="20.0" prefWidth="400.0" promptText="Annountment Title" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
+        <TextField fx:id="announcementTitle" layoutX="49.0" layoutY="20.0" prefHeight="20.0" prefWidth="400.0" promptText="Announcement Title" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
             <font>
                 <Font size="20.0" />
             </font></TextField>
-        <TextField layoutX="49.0" layoutY="70.0" prefHeight="20.0" prefWidth="400.0" promptText="Due Date" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
+        <TextField fx:id="announcementDueDate" layoutX="49.0" layoutY="70.0" prefHeight="20.0" prefWidth="400.0" promptText="Due Date (dd/mm/yyyy" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
             <font>
                 <Font size="20.0" />
             </font></TextField>
-        <TextField layoutX="49.0" layoutY="120.0" prefHeight="20.0" prefWidth="400.0" promptText="Announcement Description (optional)" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
+        <TextField fx:id="announcementDescription" layoutX="49.0" layoutY="120.0" prefHeight="20.0" prefWidth="400.0" promptText="Announcement Description (optional)" style="-fx-background-color: null; -fx-border-color: #03c2fc; -fx-border-width: 0px 0px 2px 0px;">
             <font>
                 <Font size="20.0" />
             </font>
@@ -24,13 +24,13 @@
 
 
 
-        <Button layoutX="149.0" layoutY="386.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #03c2fc;" text="Upload" textFill="WHITE">
+        <Button fx:id="announcementUploadBtn" layoutX="145.0" layoutY="386.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #03c2fc;" text="Upload" textFill="WHITE">
             <font>
                 <Font size="23.0" />
             </font>
         </Button>
-      <TextField alignment="BASELINE_CENTER" layoutX="168.0" layoutY="189.0" text="OR" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="143.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true"/>
+      <TextField alignment="BASELINE_CENTER" layoutX="171.0" layoutY="190.0" text="OR" />
+      <ImageView fx:id="announcementImage" fitHeight="150.0" fitWidth="200.0" layoutX="145.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
 
 
 
