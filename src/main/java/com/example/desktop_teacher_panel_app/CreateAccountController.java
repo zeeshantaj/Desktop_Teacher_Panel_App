@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -14,6 +15,8 @@ import javafx.stage.Stage;
 //import com.google.auth.oauth2.GoogleCredentials;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CreateAccountController {
 
@@ -21,7 +24,7 @@ public class CreateAccountController {
     private FXMLLoader loader;
 
     @FXML
-    private TextField firstName,lastName,email,userName,password,confirmPassword;
+    private TextField firstName,lastName,email,password,confirmPassword;
 
     @FXML
     private Button registerButton;
@@ -38,7 +41,62 @@ public class CreateAccountController {
         stage.setTitle("User Login");
         //stage.getIcons().add(new Image("/assets/pngegg.png"));
         stage.show();
-       // initializedFirebase();
+        // initializedFirebase();
+    }
+
+    public void initialize() {
+        registerButton.setOnMouseClicked(event -> {
+            String name = firstName.getText();
+            String lName = lastName.getText();
+            String email1 = email.getText();
+            String pass = password.getText();
+            String conPass = confirmPassword.getText();
+
+
+            String emailRegexPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+            Pattern pattern = Pattern.compile(emailRegexPattern);
+            Matcher matcher = pattern.matcher(email1);
+
+            if (name.isEmpty()){
+                AlertDialogue.showAlert("FirstName Error","FirstName should not be empty", Alert.AlertType.WARNING);
+                return;
+            }
+            if (lName.isEmpty()) {
+                AlertDialogue.showAlert("lastName Error", "lastName should not be empty", Alert.AlertType.WARNING);
+                return;
+            }
+            if (email1.isEmpty()) {
+                AlertDialogue.showAlert("Email Error", "email should not be empty", Alert.AlertType.WARNING);
+                return;
+            }
+            if (pass.isEmpty()) {
+                AlertDialogue.showAlert("Password Error", "Password should not be empty", Alert.AlertType.WARNING);
+                return;
+            }
+            if (conPass.isEmpty()) {
+                AlertDialogue.showAlert("ConfirmPassword Error", "ConfirmPassword should not be empty", Alert.AlertType.WARNING);
+                return;
+            }
+            if (!pass.equals(conPass)){
+                AlertDialogue.showAlert("Password Matching Error","Password and ConfirmPassword should be same", Alert.AlertType.WARNING);
+                return;
+            }
+            if (!matcher.matches()){
+                AlertDialogue.showAlert("Email is badly formatted", "Email should be formatted", Alert.AlertType.WARNING);
+                return;
+            }
+            if (pass.length() < 8){
+                AlertDialogue.showAlert("Password Error", "Password should be minimum 8 characters", Alert.AlertType.WARNING);
+                return;
+            }
+
+            if (!name.isEmpty() && !lName.isEmpty()
+                && !email1.isEmpty() && !pass.isEmpty()
+                && !conPass.isEmpty() && matcher.matches()
+                && pass.length() >= 8){
+                AlertDialogue.showAlert("Success","all fields are filled ", Alert.AlertType.WARNING);
+            }
+        });
     }
 
 //    private void initializedFirebase() {

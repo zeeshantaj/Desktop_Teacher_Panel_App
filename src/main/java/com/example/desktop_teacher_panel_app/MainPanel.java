@@ -23,8 +23,10 @@ public class MainPanel extends Application {
 
         stage.setScene(scene);
         stage.setTitle("User Login");
-        //stage.getIcons().add(new Image("/assets/pngegg.png"));
         stage.show();
+
+        // todo focus of cursor somewhere from textField
+        scene.getRoot().requestFocus();
     }
 
     public static void main(String[] args) {
