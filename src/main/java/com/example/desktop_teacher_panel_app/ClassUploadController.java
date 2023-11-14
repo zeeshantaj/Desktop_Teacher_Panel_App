@@ -5,6 +5,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class ClassUploadController {
 
     @FXML
@@ -33,6 +36,13 @@ public class ClassUploadController {
             String topic = todayTopic.getText();
             String key = keyText.getText();
             String minutes = minute.getText();
+
+// todo number format
+            String regex = "^-?\\d+$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(minutes);
+
+
             if (teacher.isEmpty()){
                 AlertDialogue.showAlert("Empty Filed","teacher name is empty", Alert.AlertType.WARNING);
                 return;
@@ -61,11 +71,15 @@ public class ClassUploadController {
                 AlertDialogue.showAlert("Empty Filed", "minute is empty", Alert.AlertType.WARNING);
                 return;
             }
+            if (!matcher.matches()) {
+                AlertDialogue.showAlert("Minutes input Error ", "minute should be in numeric format", Alert.AlertType.WARNING);
+                return;
+            }
 
             if (!teacher.isEmpty() && !depart.isEmpty()
                 && !sub.isEmpty() && !location.isEmpty()
                 && !topic.isEmpty() && !key.isEmpty()
-                && !minutes.isEmpty()){
+                && !minutes.isEmpty() && matcher.matches()){
                 AlertDialogue.showAlert("success","all filed filled ", Alert.AlertType.WARNING);
             }
 

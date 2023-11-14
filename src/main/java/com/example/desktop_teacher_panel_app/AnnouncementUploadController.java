@@ -54,19 +54,16 @@ public class AnnouncementUploadController {
             }
             if (dueDate.isEmpty()){
                 AlertDialogue.showAlert("Empty Filed","Please fill the due date", Alert.AlertType.WARNING);
+                return;
 
             }
             if (!matcher.matches()){
                 AlertDialogue.showAlert("Empty Filed","due date should be in this formate (dd/mm/yyyy)", Alert.AlertType.WARNING);
-
+                return;
             }
             if (!title.isEmpty() && !dueDate.isEmpty() && matcher.matches()){
                 AlertDialogue.showAlert("title and due date is filled","Please fill the title", Alert.AlertType.WARNING);
-
             }
-
-
-
         });
 
 
