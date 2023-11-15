@@ -61,32 +61,32 @@ public class LoginController  {
     }
     public void initialize() {
 
-        loginButton.setOnMouseClicked(event -> {
-            String email1 = email.getText();
-            String pass = password.getText();
-
-            String emailRegexPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
-            Pattern pattern = Pattern.compile(emailRegexPattern);
-            Matcher matcher = pattern.matcher(email1);
-
-
-            if (email1.isEmpty()){
-                AlertDialogue.showAlert("Email is Empty","Email can not be empty", Alert.AlertType.WARNING);
-                return;
-            }
-            if (pass.isEmpty()) {
-                AlertDialogue.showAlert("password is Empty","password can not be empty", Alert.AlertType.WARNING);
-                return;
-            }
-            if (!matcher.matches()) {
-                AlertDialogue.showAlert("Email is badly formatted", "Email should be formatted", Alert.AlertType.WARNING);
-                return;
-            }
-            if (!email1.isEmpty() && !pass.isEmpty()
-                && matcher.matches() && pass.length() >= 8){
-
-            }
-
-        });
+//        loginButton.setOnMouseClicked(event -> {
+//            String email1 = email.getText();
+//            String pass = password.getText();
+//
+//            String emailRegexPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+//            Pattern pattern = Pattern.compile(emailRegexPattern);
+//            Matcher matcher = pattern.matcher(email1);
+//
+//
+//            if (email1.isEmpty()){
+//                AlertDialogue.showAlert("Email is Empty","Email can not be empty", Alert.AlertType.WARNING);
+//                return;
+//            }
+//            if (pass.isEmpty()) {
+//                AlertDialogue.showAlert("password is Empty","password can not be empty", Alert.AlertType.WARNING);
+//                return;
+//            }
+//            if (!matcher.matches()) {
+//                AlertDialogue.showAlert("Email is badly formatted", "Email should be formatted", Alert.AlertType.WARNING);
+//                return;
+//            }
+//            if (!email1.isEmpty() && !pass.isEmpty()
+//                && matcher.matches() && pass.length() >= 8){
+//                showHomeContent();
+//            }
+//
+//        });
     }
 }

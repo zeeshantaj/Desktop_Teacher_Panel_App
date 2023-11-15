@@ -8,9 +8,11 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1003.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_teacher_panel_app.MainHomeContentController">
     <left>
-        <VBox prefHeight="601.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
+        <VBox fx:id="vBoxContainer" prefHeight="601.0" prefWidth="185.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="uploadClass" mnemonicParsing="false" onAction="#uploadClass" prefHeight="30.0" prefWidth="173.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;" styleClass="bt" text="Class" textAlignment="JUSTIFY">
+
+                <Button fx:id="uploadClass" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0"
+                        styleClass="default-button" text="Post Class" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="17.0" />
                     </font>
@@ -18,7 +20,8 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="uploadAnnouncement" mnemonicParsing="false" onAction="#uploadAnnouncement" prefHeight="30.0" prefWidth="172.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px;" styleClass="bt" text="Accouncement" textAlignment="JUSTIFY">
+                <Button fx:id="uploadAnnouncement"
+                        mnemonicParsing="false"  prefHeight="40.0" prefWidth="180.0"  styleClass="bt" text="Post Announcement" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="17.0" />
                     </font>
@@ -26,7 +29,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="classHistory" mnemonicParsing="false" onAction="#classHistory" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px;" styleClass="bt" text="Class History" textAlignment="JUSTIFY">
+                <Button fx:id="classHistory" mnemonicParsing="false"  prefHeight="40.0" prefWidth="180.0"  styleClass="bt" text="Class History" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="17.0" />
                     </font>
@@ -34,9 +37,9 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="announcementHistory" mnemonicParsing="false" onAction="#announcementHistory" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-background-insets: 5px; -fx-pref-height: 40px;" styleClass="bt" text="Accouncement History" textAlignment="JUSTIFY">
+                <Button fx:id="announcementHistory" mnemonicParsing="false"  prefHeight="50.0" prefWidth="180.0"  styleClass="bt" text="Accouncement History" textAlignment="JUSTIFY">
                     <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />

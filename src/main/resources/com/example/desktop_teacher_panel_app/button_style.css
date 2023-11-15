@@ -1,0 +1,16 @@
+.default-button {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #03c2fc;
+    -fx-padding: 5px;
+    -fx-border-image-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+/* Selected button style */
+.selected-button {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #ff0000; /* Change to red */
+    -fx-padding: 5px;
+    -fx-border-image-insets: 5px;
+    -fx-background-insets: 5px;
+}
