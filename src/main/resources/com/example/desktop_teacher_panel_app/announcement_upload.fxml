@@ -29,7 +29,7 @@
                 <Font size="23.0" />
             </font>
         </Button>
-      <TextField alignment="BASELINE_CENTER" layoutX="171.0" layoutY="190.0" text="OR" />
+      <Text layoutX="237.0" layoutY="198.0" text="OR" />
       <ImageView fx:id="announcementImage" fitHeight="150.0" fitWidth="200.0" layoutX="145.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
 
 
