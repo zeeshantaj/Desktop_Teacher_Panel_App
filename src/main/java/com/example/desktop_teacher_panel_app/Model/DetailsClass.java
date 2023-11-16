@@ -1,8 +1,11 @@
 package com.example.desktop_teacher_panel_app.Model;
 
+import java.util.List;
+
 public class DetailsClass {
 
     private String teacherName,subjectName,department,classLocation,todayTopic,keyText,minutes;
+
     public DetailsClass(String teacherName, String subjectName, String department, String classLocation, String todayTopic,String minutes) {
         this.teacherName = teacherName;
         this.subjectName = subjectName;
@@ -11,6 +14,8 @@ public class DetailsClass {
         this.todayTopic = todayTopic;
         this.minutes = minutes;
     }
+
+
 
     public String getMinutes() {
         return minutes;

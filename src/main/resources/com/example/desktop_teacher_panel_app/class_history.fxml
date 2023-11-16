@@ -11,6 +11,6 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.desktop_teacher_panel_app.ClassHistoryController">
 
-    <ListView fx:id="meetingListView" prefWidth="400" prefHeight="300"/>
+    <ListView fx:id="meetingListView" prefWidth="800" prefHeight="430"/>
 
 </VBox>

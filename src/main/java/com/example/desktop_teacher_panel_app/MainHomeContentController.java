@@ -114,7 +114,7 @@ public class MainHomeContentController {
 //        });
             loadFXML("class_upload");
 
-            uploadClass.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #4300bc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
+            uploadClass.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #0096c9; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
             classHistory.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
             uploadAnnouncement.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
             announcementHistory.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #03c2fc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
@@ -129,7 +129,7 @@ public class MainHomeContentController {
 
                     for (Button menuButton : menus) {
                         if (menuButton == clickedButton) {
-                            menuButton.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #4300bc; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
+                            menuButton.setStyle("-fx-text-fill: #f0f0f0; -fx-background-color: #0096c9; -fx-padding: 5px; -fx-border-image-insets: 5px; -fx-background-insets: 5px;");
 
                             // Load corresponding FXML based on the clicked button
                             if (menuButton == uploadClass) {
