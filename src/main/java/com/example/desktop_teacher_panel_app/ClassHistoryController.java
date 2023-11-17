@@ -80,7 +80,12 @@ public class ClassHistoryController {
                     minutes.setFont(font);
 
 
-                    Text countTxt = new Text("No: "+meetingListView.getItems().size());
+                    Text countTxt = new Text();
+
+                    for (int i =1; i <= meetingListView.getItems().size(); i++) {
+                        countTxt.setText("No: "+i);
+                        //countTxt = new Text("No: " + meetingListView.getItems().size());
+                    }
                     countTxt.setStyle("-fx-background-color: #ffffff; -fx-border-color: black; -fx-padding: 3px;");
 
                     cell.getChildren().addAll(teacher, className, topic, subject, minutes,countTxt);

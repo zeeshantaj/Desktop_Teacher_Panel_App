@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1003.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_teacher_panel_app.MainHomeContentController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_teacher_panel_app.MainHomeContentController">
     <left>
         <VBox fx:id="vBoxContainer" prefHeight="601.0" prefWidth="185.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
             <children>
@@ -37,7 +37,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="announcementHistory" mnemonicParsing="false"  prefHeight="50.0" prefWidth="180.0"  styleClass="bt" text="Accouncement History" textAlignment="JUSTIFY">
+                <Button fx:id="announcementHistory" mnemonicParsing="false"  prefHeight="50.0" prefWidth="180.0"  styleClass="bt" text="Announcement History" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -50,7 +50,7 @@
         </VBox>
     </left>
     <top>
-        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="1016.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom right, red, blue);" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="logout" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="77.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #fc0b03;" styleClass="bt" text="Log Out" textAlignment="JUSTIFY" textFill="#eb401a">
                     <font>
@@ -74,7 +74,7 @@
     <center>
         <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
             <children>
-                <Pane fx:id="container" prefHeight="435.0" prefWidth="843.0" />
+                <Pane fx:id="container" prefHeight="435.0" prefWidth="500.0" />
             </children></VBox>
     </center>
 </BorderPane>
